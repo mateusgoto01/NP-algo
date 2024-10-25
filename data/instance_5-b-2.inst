@@ -1,0 +1,18 @@
+# m
+1
+
+# M
+32
+
+# max_trade_bound
+2
+
+# longueur 
+16
+
+# sigma
+[32, 16, 8, 4, 2, 1, 4, 2, 1, 2, 1, 4, 2, 1, 1, 32]
+
+# Solution exacte
+128.0
+
