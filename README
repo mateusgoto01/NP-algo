@@ -1,13 +1,14 @@
-Compétion Alhorithmique Avancée CS 3A INFO 2023/24 -- Slow-Fast Scheduling online:
+command: python3 dominant.py $competition_dataset $output
+command: python3 Two-Way-Trading_online.py $competition_dataset $output
 
 Consignes:
 -- Ne modifiez pas et n'effacez pas le fichier 'metadata'. Gardez-le dans l'archive de votre soumission.
 -- Completez le code de 'Slow-Fast-Scheduling_online.py' mais ne touchez pas au '__main__'
--- Pour indiquer si votre algoritme est détérministe ou randomisé, modifiez la fonction mon_algo_est_deterministe() qui retourne une valeur logique (True par défaut)
+-- Pour indiquer si votre algoritme est dï¿½tï¿½rministe ou randomisï¿½, modifiez la fonction mon_algo_est_deterministe() qui retourne une valeur logique (True par dï¿½faut)
 -- Pour tester votre code utilisez la commande suivante : 
        * python3 Slow-Fast-Scheduling_online.py rep_data_set rep_answer
-       * 'rep_data_set' correspond au répertoire contenant les fichiers instances
-       * 'rep_answer' correspond au répertoire où le fichier des réponses sera sauvegardé
+       * 'rep_data_set' correspond au rï¿½pertoire contenant les fichiers instances
+       * 'rep_answer' correspond au rï¿½pertoire oï¿½ le fichier des rï¿½ponses sera sauvegardï¿½
 
 
 

@@ -60,6 +60,7 @@ def achat(taux, taux_achat, trades_done, max_trade_bound, sol_online):
 ##############################################################  
 
 # le passage entre modules exige de passer m, M et longueur comme paramètres
+# first buy need to be 1
 def two_way_trading_online(m, M, longueur, sol_online, day, trades_done, max_trade_bound, taux_achat, taux):
 
     ###################################################################################
@@ -76,7 +77,6 @@ def two_way_trading_online(m, M, longueur, sol_online, day, trades_done, max_tra
     # ###################################################################################
     M1_3 = M**(0.5 / 3)  # Threshold for buying
     M2_3 = M**(1.5 / 3)  # Threshold for selling
-    stop_loss_threshold = 0.8 * taux_achat  # 20% loss limit
         
     # Define K and adjust strategy
     if trades_done <= max_trade_bound:
@@ -87,7 +87,7 @@ def two_way_trading_online(m, M, longueur, sol_online, day, trades_done, max_tra
             elif taux_achat > 0 and taux >= 1.45*M2_3:
                 sol_online, taux_achat, trades_done = vente(taux, taux_achat, trades_done, sol_online)
 
-        elif max_trade_bound > 2 and longueur >= 1:
+        elif max_trade_bound > 2 and longueur >= 8:
             # For larger k and long range: Buy and sell on small price increases, avoiding bad conditions
             if taux_achat == TRANSATION_CLOSED and (taux <= M1_3):
                 taux_achat = achat(taux, taux_achat, trades_done, max_trade_bound, sol_online)
@@ -106,8 +106,6 @@ def two_way_trading_online(m, M, longueur, sol_online, day, trades_done, max_tra
         if day == longueur - 1 and taux_achat != TRANSATION_CLOSED:
             sol_online, taux_achat, trades_done = vente(taux, taux_achat, trades_done, sol_online)
     return sol_online, taux_achat, trades_done
-
-    
 
 
 ##############################################################
