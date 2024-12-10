@@ -14,6 +14,7 @@ This project involves two main components:
 ├── dominant_set.py           # Script for calculating dominant sets from graphs
 ├── trading_algorithm.py      # Script for implementing the online trading algorithm
 ├── README.md                 # This file
+```
 ## Dominant Set Calculation
 
 ### Dependencies
